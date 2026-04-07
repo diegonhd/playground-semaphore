@@ -4,10 +4,10 @@
 ├── README.md               # Documentação
 ├── docs/                   # Orientações sobre o projeto
 └── src/
-    ├── Playground.Core/    # Back-end: Bibliotecas de Classes (.NET)
-    │   ├── Models/         # Classes
-    │   ├── Services/       # Lógica dos Semáforos e Gerenciamento de Threads
-    └── Playground.Unity/   # Front-end: Projeto Unity completo
+    ├── backend_core/    # Back-end: Bibliotecas de Classes (.NET)
+    │   ├── models/         # Classes
+    │   ├── services/       # Lógica dos Semáforos e Gerenciamento de Threads
+    └── frontend_unity/   # Front-end: Projeto Unity completo
 ```
 
 ![Orientações sobre o projeto](docs\projeto.png)
