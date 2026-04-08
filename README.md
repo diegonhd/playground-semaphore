@@ -1,5 +1,5 @@
 ``` text
-/nome-do-repositorio
+/playground-semaphore
 ├── .gitignore              # Unity, C# e Visual Studio Code
 ├── README.md               # Documentação
 ├── docs/                   # Orientações sobre o projeto
@@ -9,5 +9,3 @@
     │   ├── services/       # Lógica dos Semáforos e Gerenciamento de Threads
     └── frontend_unity/   # Front-end: Projeto Unity completo
 ```
-
-![Orientações sobre o projeto](docs\projeto.png)
