@@ -676,4 +676,13 @@ FodyWeavers.xsd
 # Ignore all .csproj files
 *.csproj
 
+# Custom root ignores
+# Ignore Unity generated folders at repository root
+/Library/
+/library/
+/Packages/
+/packages/
+/Assets/Art/Tiles/
+/assets/art/tiles/
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,unity,csharp,visualstudiocode
