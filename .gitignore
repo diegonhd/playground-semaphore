@@ -660,4 +660,20 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
+# Ignore Unity project-specific folders (src/unity-project)
+/src/unity-project/packages/
+/src/unity-project/Packages/
+/src/unity-project/library/
+/src/unity-project/Library/
+/src/unity-project/[Uu]ser[Ss]ettings/
+
+# Ignore Unity Tiles (generated) under Assets
+/src/unity-project/Assets/Tiles/
+/src/unity-project/Assets/tiles/
+/src/unity-project/Assets/Art/Tiles/Pokemon_like/
+/src/unity-project/Assets/Art/Tiles/pokemon_like/
+
+# Ignore all .csproj files
+*.csproj
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,unity,csharp,visualstudiocode
