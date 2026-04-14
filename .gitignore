@@ -666,6 +666,8 @@ FodyWeavers.xsd
 /src/unity-project/library/
 /src/unity-project/Library/
 /src/unity-project/[Uu]ser[Ss]ettings/
+/src/unity-project/[Tt]emp/
+/src/unity-project/[Tt]emp/**
 
 # Ignore Unity Tiles (generated) under Assets
 /src/unity-project/Assets/Tiles/

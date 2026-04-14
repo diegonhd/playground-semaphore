@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
 
     private bool IsWalkable(Vector3 targetPos)
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll((Vector2)targetPos, 0.2f, solidObjectsLayer);
+        Collider2D[] hits = Physics2D.OverlapCircleAll((Vector2)targetPos, 0.1f, solidObjectsLayer);
         foreach (var hit in hits)
         {
             if (hit != null && hit.gameObject != gameObject)
