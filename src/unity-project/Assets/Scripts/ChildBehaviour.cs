@@ -16,7 +16,7 @@ public class ChildBehaviour : MonoBehaviour
     [SerializeField] private KeyCode realtimeSpawnKey = KeyCode.N;
     [SerializeField] private int realtimeSpawnAmount = 1;
 
-    private readonly SpawnArea areaA = new SpawnArea(1.16f, 2.5f, -3.19f, 1.4f);
+    private readonly SpawnArea areaA = new SpawnArea(5.45f, 0.4499998f, -3.23f, 3.77f);
 
     private void Start()
     {

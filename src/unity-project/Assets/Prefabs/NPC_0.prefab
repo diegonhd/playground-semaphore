@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7147441331359327904}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.71, y: -0.15, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.5, y: 1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -202,20 +202,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545afea7f9d0a1d43af07cd6148a5d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
-  moveSpeed: 3
+  moveSpeed: 2
   minIdleTime: 0.5
   maxIdleTime: 2
   tb: 5
   td: 5
+  repeatRoutineAfterTd: 0
   useDefaultSpawnPosition: 1
-  defaultSpawnPosition: {x: 4.15, y: 0.62, z: 1}
+  defaultSpawnPosition: {x: 6.5, y: 1.75, z: 1}
   worldCollisionLayer:
     serializedVersion: 2
     m_Bits: 64
   npcCollisionLayer:
     serializedVersion: 2
     m_Bits: 128
-  transitionPoint: {x: 2.3, y: 3.38, z: 1}
+  transitionPoint: {x: 3.5, y: 4.75, z: 1}
   transitionRightOffset: 0.2
   transitionWaitSeconds: 2
   collisionCheckRadius: 0.12

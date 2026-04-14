@@ -9,11 +9,12 @@ public partial class NPCController : MonoBehaviour
     [SerializeField] private float maxIdleTime = 2f;
     [SerializeField] private float tb = 5f;
     [SerializeField] private float td = 5f;
+    [SerializeField] private bool repeatRoutineAfterTd = false;
     [SerializeField] private bool useDefaultSpawnPosition = false;
     [SerializeField] private Vector3 defaultSpawnPosition = new Vector3(4.15f, 0.62f, 1f);
     [SerializeField] private LayerMask worldCollisionLayer;
     [SerializeField] private LayerMask npcCollisionLayer;
-    [SerializeField] private Vector3 transitionPoint = new Vector3(2.35f, 3.38f, 1f);
+    [SerializeField] private Vector3 transitionPoint = new Vector3(3.45f, 4.77f, 1f);
     [SerializeField] private float transitionRightOffset = 0.2f;
     [SerializeField] private float transitionWaitSeconds = 2f;
     [SerializeField] private float collisionCheckRadius = 0.12f;
@@ -28,8 +29,8 @@ public partial class NPCController : MonoBehaviour
     private bool hasInitializedSpawn;
 
     // Limites retangulares das duas zonas de movimentação.
-    private readonly MoveArea area = new MoveArea(-1.27f, -8.98f, 5.75f, -2.77f);
-    private readonly MoveArea outsideArea = new MoveArea(5.51f, 1.51f, 2.74f, -3.19f);
+    private readonly MoveArea area = new MoveArea(-2.55f, -7.55f, 3.77f, 0.23f);
+    private readonly MoveArea outsideArea = new MoveArea(2.45f, 4.45f, -0.23f, -2.23f);
 
     private NpcPhase phase;
     private Vector3 phaseTarget;
@@ -177,7 +178,12 @@ public partial class NPCController : MonoBehaviour
             case NpcPhase.RoamingOutsideTD:
                 // Vaga na área externa até o tempo TD acabar.
                 if (Time.time >= phaseEndTime)
-                    phase = NpcPhase.Done;
+                {
+                    if (repeatRoutineAfterTd)
+                        ResetLifecycle();
+                    else
+                        phase = NpcPhase.Done;
+                }
                 else
                     ProcessNpcMoveInArea(outsideArea);
                 break;
