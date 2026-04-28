@@ -678,6 +678,9 @@ FodyWeavers.xsd
 /src/unity-project/Assets/Art/Player/
 /src/unity-project/Assets/Fonts/
 /src/unity-project/Assets/TextMesh Pro/
+/src/unity-project/My project.slnx
+/src/unity-project/unity-interface.slnx
+/src/unity-project/unity-project.slnx
 
 # Ignore all .csproj files
 *.csproj
