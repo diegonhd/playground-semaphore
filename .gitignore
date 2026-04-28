@@ -674,6 +674,10 @@ FodyWeavers.xsd
 /src/unity-project/Assets/tiles/
 /src/unity-project/Assets/Art/Tiles/Pokemon_like/
 /src/unity-project/Assets/Art/Tiles/pokemon_like/
+/src/unity-project/Assets/Art/Tiles/
+/src/unity-project/Assets/Art/Player/
+/src/unity-project/Assets/Fonts/
+/src/unity-project/Assets/TextMesh Pro/
 
 # Ignore all .csproj files
 *.csproj

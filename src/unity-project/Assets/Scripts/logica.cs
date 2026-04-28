@@ -1,3 +1,6 @@
+// Script purpose:
+// Protótipo didático em C# puro (console) do problema produtor/consumidor usado no projeto.
+// Não é o runtime principal do Unity; serve como referência conceitual de semáforos/threads.
 using System;
 using System.Threading;
 
@@ -18,13 +21,16 @@ class Program
         public int Td;
     }
 
+    // Representa a etapa de brincar no protótipo de console.
     static void Brincar(int id, int tb) // tb é o "tempo de brincar"
     // Aqui deve vir outra task cpu-bound
     {
         Console.WriteLine($"Criança {id} brinca por {tb}s");
+        // Sleep apenas pausa a thread; para simular CPU-bound de verdade, use loop de cálculo.
         Thread.Sleep(tb * 1000);
     }
 
+    // Representa a etapa de descanso no protótipo de console.
     static void Descansar(int id, int td) // td é o "tempo de descanso"
     // Aqui deve vir a task cpu-bound
     {
@@ -32,6 +38,7 @@ class Program
         Thread.Sleep(td * 1000);
     }
 
+    // Executa o ciclo completo de uma criança no exemplo de threads/semafóros.
     static void TarefaCrianca(object obj)
     {
         var c = (Crianca)obj!;
@@ -65,6 +72,7 @@ class Program
         }
     }
 
+    // Cria o cenário do exemplo e inicia todas as threads.
     static void Main()
     {
         var criancas = new Crianca[N];

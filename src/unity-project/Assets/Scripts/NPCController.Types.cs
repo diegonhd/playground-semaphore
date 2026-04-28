@@ -1,3 +1,4 @@
+// Define enums e tipos auxiliares compartilhados entre os arquivos parciais do NPCController.
 using UnityEngine;
 
 public partial class NPCController
@@ -8,11 +9,31 @@ public partial class NPCController
         GoingToArea,
         RoamingAreaTB,
         GoingToTransitionPoint,
-        GoingSlightlyRightAtTransition,
-        WaitingAfterRightMove,
-        GoingToOutsideArea,
-        RoamingOutsideTD,
-        Done
+        WaitingForBasketTurn,
+        GoingToRestSpotTD,
+        RestingAtSpotTD
+    }
+
+    private enum BasketQueueType
+    {
+        None,
+        PutBall,
+        TakeBall
+    }
+
+    public enum ChildThreadStatus
+    {
+        PlayingWithBall,
+        WaitingBallInBasket,
+        WaitingBasketSpace,
+        Resting
+    }
+
+    public enum ChildThreadSchedulingState
+    {
+        Running,
+        Ready,
+        Blocked
     }
 
     // Estrutura de limites retangulares para áreas de movimentação.
@@ -23,6 +44,8 @@ public partial class NPCController
         public float minY;
         public float maxY;
 
+        // Constrói a área já normalizada (min/max) independente da ordem dos pontos recebidos.
+        // Normaliza os limites da área, aceitando os pontos em qualquer ordem.
         public MoveArea(float x1, float x2, float y1, float y2)
         {
             minX = Mathf.Min(x1, x2);
@@ -31,6 +54,8 @@ public partial class NPCController
             maxY = Mathf.Max(y1, y2);
         }
 
+        // Teste de ponto dentro do retângulo 2D.
+        // Verifica se a posição está dentro do retângulo 2D.
         public bool Contains(Vector3 position)
         {
             return position.x >= minX && position.x <= maxX && position.y >= minY && position.y <= maxY;

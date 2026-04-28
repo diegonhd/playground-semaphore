@@ -1,29 +1,20 @@
+// Regras de colisão do NPC com cenário/obstáculos.
 using UnityEngine;
 
 public partial class NPCController
 {
-    // Valida colisão com cenário e com outros NPCs antes de mover.
+    // Verifica se o destino está livre para movimento (ignorando colisão entre NPCs).
     private bool IsWalkable(Vector3 targetPos)
     {
-        LayerMask combinedMask = worldCollisionLayer | npcCollisionLayer;
-        Collider2D[] hits = Physics2D.OverlapCircleAll((Vector2)targetPos, collisionCheckRadius, combinedMask);
+        // Consulta colisores do cenário no ponto alvo usando a layer configurada.
+        Collider2D[] hits = Physics2D.OverlapCircleAll((Vector2)targetPos, collisionCheckRadius, worldCollisionLayer);
         foreach (var hit in hits)
         {
             if (hit != null && hit.gameObject != gameObject)
+                // Qualquer obstáculo diferente de si mesmo invalida o passo.
                 return false;
         }
+        // Sem bloqueio encontrado: posição é caminhável.
         return true;
-    }
-
-    // Verifica apenas ocupação por outro NPC (resolução de disputa de alvo).
-    private bool IsOccupiedByOtherNpc(Vector3 targetPos)
-    {
-        Collider2D[] hits = Physics2D.OverlapCircleAll((Vector2)targetPos, npcOccupancyCheckRadius, npcCollisionLayer);
-        foreach (var hit in hits)
-        {
-            if (hit != null && hit.gameObject != gameObject)
-                return true;
-        }
-        return false;
     }
 }

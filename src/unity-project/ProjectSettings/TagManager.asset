@@ -50,8 +50,14 @@ TagManager:
   - name: Foreground
     uniqueID: 1010578811
     locked: 0
+  - name: Fundo
+    uniqueID: 116512455
+    locked: 0
   - name: Player
     uniqueID: 522141679
+    locked: 0
+  - name: Canvas
+    uniqueID: 237412341
     locked: 0
   m_RenderingLayers:
   - Default
