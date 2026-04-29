@@ -55,6 +55,20 @@ Simulação em **Unity** do problema de concorrência tipo **produtor/consumidor
 4. **Scenes**: contém a cena principal do jogo (`Game.unity`).
 5. **Settings**: configurações internas do projeto/cena no Unity.
 
+## Aviso importante sobre os tiles (ambiente Pokémon)
+
+Ao abrir o projeto no Unity, a interface/cenário baseado em tiles pode aparecer com falhas visuais ou incompleto. Parte dos arquivos de tileset não foi enviada ao GitHub por volume de arquivos.
+
+A referência esperada de aparência visual é a da **release v1.0.0**. Ou seja, mesmo que localmente alguns tiles não carreguem, o comportamento visual final planejado do projeto é o da release.
+
+## Como executar no Unity Editor
+
+1. Abra o **Unity Hub** e clique em **Open/Add project from disk**.
+2. Selecione a pasta `src` deste repositório.
+3. Abra o projeto com a versão de Unity sugerida pelo próprio projeto (ou a mais compatível disponível no Hub).
+4. No Unity Editor, abra a cena `Assets/Scenes/Game.unity`.
+5. Clique em **Play** para executar a simulação.
+
 ## Documentação técnica complementar
 
 - `docs/projeto.png`: referência visual do escopo/fluxo do projeto.
