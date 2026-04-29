@@ -32,7 +32,10 @@ Simulação em **Unity** do problema de concorrência tipo **produtor/consumidor
 └── README.md
 ```
 
-## Interseções entre o projeto.pdf e a implementação Unity
+## Orientações sobre o projeto (projeto.png)
+![Orientações](docs\projeto.png)
+
+## Interseções entre as orientações do projeto e a implementação Unity
 
 | Conceito do enunciado (PDF) | Onde isso aparece no Unity |
 |---|---|
