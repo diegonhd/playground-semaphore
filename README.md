@@ -33,7 +33,7 @@ Simulação em **Unity** do problema de concorrência tipo **produtor/consumidor
 ```
 
 ## Orientações sobre o projeto (projeto.png)
-![Orientações](docs\projeto.png)
+![Orientações](docs/projeto.png)
 
 ## Interseções entre as orientações do projeto e a implementação Unity
 
