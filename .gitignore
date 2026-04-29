@@ -462,9 +462,26 @@ FodyWeavers.xsd
 # Ignore everything under Assets by default
 /src/Assets/**
 
-# Re-include Scripts folder and its contents
+# Re-include specific Asset folders and their contents
 !/src/Assets/Scripts/
 !/src/Assets/Scripts/**
+!/src/Assets/Settings/
+!/src/Assets/Settings/**
+!/src/Assets/Scenes/
+!/src/Assets/Scenes/**
+!/src/Assets/Prefabs/
+!/src/Assets/Prefabs/**
+!/src/Assets/Images/
+!/src/Assets/Images/**
+!/src/Assets/Art/
+!/src/Assets/Art/**
+!/src/Assets/Art/Tiles/
+!/src/Assets/Art/Tiles/**
+!/src/Assets/Art/Tileset/
+!/src/Assets/Art/Tileset/**
+
+# Ignore all .meta files everywhere
+**/*.meta
 
 ### VisualStudioCode ###
 !.vscode/*.code-snippets
@@ -675,7 +692,6 @@ FodyWeavers.xsd
 /src/Assets/Art/Tiles/Pokemon_like/
 /src/Assets/Art/Tiles/pokemon_like/
 /src/Assets/Art/Tiles/
-/src/Assets/Art/Player/
 /src/Assets/Fonts/
 /src/Assets/TextMesh Pro/
 /src/My project.slnx
